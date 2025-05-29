@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Learning typescript basic to advance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShykatDev/typescript-learning.git"
+  },
+  "author": "Shykat Raha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShykatDev/typescript-learning/issues"
+  },
+  "homepage": "https://github.com/ShykatDev/typescript-learning#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
