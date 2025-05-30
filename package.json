@@ -4,7 +4,11 @@
   "description": "Learning typescript basic to advance",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node-dev --respawn -r tsconfig/paths/register src/index.ts"
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc && tsc-alias",
+    "watch": "tsc -w",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
