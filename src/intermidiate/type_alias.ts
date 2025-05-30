@@ -10,6 +10,15 @@ type User = {
   age: number;
   isActive: boolean;
   skills?: string[]; // Optional property
+  address: {
+    street: string;
+    city: string;
+    country: string;
+    coordinates?: {
+      latitude: number;
+      longitude: number;
+    };
+  };
 };
 
 /** Multiple ways to return user type data
@@ -25,6 +34,15 @@ function createUser(name: Name) {
     age: 0,
     isActive: false,
     skills: [],
+    address: {
+      street: "",
+      city: "",
+      country: "",
+      coordinates: {
+        latitude: 0,
+        longitude: 0,
+      },
+    },
   };
 
   return user;
@@ -32,3 +50,20 @@ function createUser(name: Name) {
 
 const user1 = createUser("Alice");
 console.log(user1);
+
+type Address = User["address"]; // Extracting the address type from User
+type Coordinates = Address["coordinates"]; // Extracting the coordinates type from User's address
+
+function getAddress(addr: Address): Address {
+  return {
+    street: addr.street,
+    city: addr.city,
+    country: addr.country,
+  };
+}
+
+// Function type
+type CB = () => void; // Callback type that returns void
+function testCB(cb: CB) {
+  cb();
+}
