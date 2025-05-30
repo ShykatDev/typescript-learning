@@ -1,5 +1,6 @@
 // Type Inference for the intermediate representation
 // If any variable has a value, it is considered to have a type -> It is inferred
+// - Note: TypeScript doesn't infer object types, it infers primitive types like string, number, boolean, etc.
 
 let latitude = 12.763; // Inferred as number
 let longitude = 77.123; // Inferred as number
