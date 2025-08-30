@@ -11,4 +11,4 @@ const frameworks = {
 };
 
 type FrameworksKeys = typeof frameworks;
-type Frameworks = keyof FrameworksKeys;
+type Frameworks = keyof FrameworksKeys;  // "Vitest" | "Jest" | "Mocha" -> union type
